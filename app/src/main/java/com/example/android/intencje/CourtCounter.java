@@ -1,5 +1,6 @@
 package com.example.android.intencje;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CourtCounter extends AppCompatActivity {
 
@@ -84,7 +86,26 @@ public class CourtCounter extends AppCompatActivity {
         dane.putString("nameB", nameB);
         dane.putInt("scoreB", scoreTeamB);
         list.putExtras(dane);
-        Log.v("CountCounter", "put Extras");
-        startActivity(list);
+        startActivityForResult(list, 1);
+    }
+
+    public void back(View view){
+        Intent backScreen = new Intent(CourtCounter.this, MainActivity.class);
+        startActivity(backScreen);
+    }
+
+    @Override
+    protected void onActivityResult(int redID, int resC, Intent ii){
+        if(resC == Activity.RESULT_OK && redID == 1) {
+            Bundle dane = new Bundle();
+            dane = ii.getExtras();
+            String result = dane.getString("wynik");
+            Log.v("CountCounter", result);
+            Toast.makeText(getApplicationContext(),
+                    result, Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(getApplicationContext(),
+                    "Somethin goes wrong", Toast.LENGTH_LONG).show();
+        }
     }
 }

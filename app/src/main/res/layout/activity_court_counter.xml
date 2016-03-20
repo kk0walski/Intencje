@@ -126,4 +126,14 @@
         android:layout_marginBottom="32dp"
         android:onClick="saveScore"
         android:text="SAVE" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp"
+        android:onClick="back"
+        android:text="@string/back" />
 </RelativeLayout>

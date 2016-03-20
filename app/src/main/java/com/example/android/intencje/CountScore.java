@@ -46,11 +46,9 @@ public class CountScore extends AppCompatActivity {
         score.putString("wynik", wynik);
         backIntent.putExtras(score);
         setResult(Activity.RESULT_OK, backIntent);
-        finish();
     }
 
     public void back(View view){
-        Intent intencja = new Intent(CountScore.this, CourtCounter.class);
-        startActivity(intencja);
+        finish();
     }
 }

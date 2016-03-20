@@ -17,4 +17,9 @@ public class MainActivity extends AppCompatActivity {
         Intent order = new Intent(MainActivity.this, JustJava.class);
         startActivity(order);
     }
+
+    public void playMatch(View view){
+        Intent match = new Intent(MainActivity.this, CourtCounter.class);
+        startActivity(match);
+    }
 }

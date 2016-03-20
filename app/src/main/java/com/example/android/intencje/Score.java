@@ -1,5 +1,10 @@
 package com.example.android.intencje;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * Created by admin on 20.03.2016.
  */
@@ -10,6 +15,8 @@ public class Score {
     public String nameB;
     public int scoreB;
     long time;
+    DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm");
+    Date today = Calendar.getInstance().getTime();
 
     public Score(String aName, int aScore, String bName, int bScore){
         nameA = aName;
@@ -21,7 +28,7 @@ public class Score {
 
     @Override
     public String toString(){
-        return time + "   " + nameA + "   " + scoreA + "   -   " + nameB + "   " + scoreB;
+        return df.format(today) + "   " + nameA + "   " + scoreA + "   -   " + nameB + "   " + scoreB;
     }
 }
 

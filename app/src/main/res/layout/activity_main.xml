@@ -21,6 +21,7 @@
         style="@style/CustomText" />
     <Button
         android:text="@string/Coffe"
+        android:onClick="coffeeOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -5,10 +5,10 @@ package com.example.android.intencje;
  */
 public class Score {
 
-    String nameA;
-    int scoreA;
-    String nameB;
-    int scoreB;
+    public String nameA;
+    public int scoreA;
+    public String nameB;
+    public int scoreB;
 
     public Score(String aName, int aScore, String bName, int bScore){
         nameA = aName;

@@ -9,18 +9,18 @@ import java.util.ArrayList;
 public class CountScore extends AppCompatActivity {
 
     private ArrayList<Score> listItems=new ArrayList<Score>();
+    private Bundle score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_count_score);
-
-        Bundle score = this.getIntent().getExtras();
+        score = this.getIntent().getExtras();
 
     }
 
     private void add(Bundle result){
-        ListView list = (ListView)findViewById(R.id.list);
-        list.
+        Score element = new Score(score.getString("nameA"), score.getInt("scoreA"), score.getString("nameB"), score.getInt("scoreB"));
+        listItems.add(element);
     }
 }

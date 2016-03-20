@@ -11,7 +11,24 @@
     tools:context="com.example.android.intencje.MainActivity">
 
     <TextView
-        android:text="Hello World!"
+        android:text="@string/Autor"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        style="@style/HeaderTextStyle" />
+    <TextView
+        android:text="@string/Description"
+        android:layout_centerInParent="true"
+        style="@style/CustomText" />
+    <Button
+        android:text="@string/Coffe"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+    <Button
+        android:text="@string/Match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
 </RelativeLayout>

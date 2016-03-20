@@ -20,6 +20,7 @@ public class CountScore extends AppCompatActivity {
         setContentView(R.layout.activity_count_score);
         score = this.getIntent().getExtras();
         add(score);
+        show();
     }
 
     private void add(Bundle result){

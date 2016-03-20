@@ -73,20 +73,12 @@ public class CourtCounter extends AppCompatActivity {
     }
 
     public void saveScore(View view){
-        Log.v("CountCounter", "start function");
         Intent list = new Intent(CourtCounter.this, CountScore.class);
         Bundle dane = new Bundle();
-        Log.v("CountCounter", "create intent");
         EditText aName = (EditText)findViewById(R.id.nameA);
         EditText bName = (EditText)findViewById(R.id.nameB);
         String nameA = aName.getText().toString();
-        Log.v("CountCounter", nameA);
         String nameB = bName.getText().toString();
-        Log.v("CountCounter", nameB);
-        Log.v("CountCounter", Integer.toString(scoreTeamA));
-        Log.v("CountCounter", Integer.toString(scoreTeamB));
-        Log.v("CountCounter", "Create variables");
-        Log.v("CountCounter", "save data");
         dane.putString("nameA", nameA);
         dane.putInt("scoreA", scoreTeamA);
         dane.putString("nameB", nameB);

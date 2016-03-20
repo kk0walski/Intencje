@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CountScore extends AppCompatActivity {
 
-    private ArrayList<Score> listItems = new ArrayList<Score>();
+    static ArrayList<Score> listItems = new ArrayList<Score>();
     private ArrayAdapter<Score> adapter;
     private Bundle score;
 

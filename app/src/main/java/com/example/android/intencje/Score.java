@@ -9,17 +9,19 @@ public class Score {
     public int scoreA;
     public String nameB;
     public int scoreB;
+    long time;
 
     public Score(String aName, int aScore, String bName, int bScore){
         nameA = aName;
         scoreA = aScore;
         nameB = bName;
         scoreB = bScore;
+        time = System.currentTimeMillis();
     }
 
     @Override
     public String toString(){
-        return nameA + "   " + scoreA + "   -   " + nameB + "   " + scoreB;
+        return time + "   " + nameA + "   " + scoreA + "   -   " + nameB + "   " + scoreB;
     }
 }
 

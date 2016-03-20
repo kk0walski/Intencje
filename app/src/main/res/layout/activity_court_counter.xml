@@ -124,6 +124,6 @@
         android:layout_alignParentRight="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="32dp"
-        android:onClick="Reset"
+        android:onClick="saveScore"
         android:text="SAVE" />
 </RelativeLayout>

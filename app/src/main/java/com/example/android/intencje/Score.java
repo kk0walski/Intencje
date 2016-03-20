@@ -13,8 +13,13 @@ public class Score {
     public Score(String aName, int aScore, String bName, int bScore){
         nameA = aName;
         scoreA = aScore;
-        nameA = bName;
+        nameB = bName;
         scoreB = bScore;
+    }
+
+    @Override
+    public String toString(){
+        return nameA + "   " + scoreA + "   -   " + nameB + "   " + scoreB;
     }
 }
 

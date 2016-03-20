@@ -1,8 +1,10 @@
 package com.example.android.intencje;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class CourtCounter extends AppCompatActivity {
@@ -67,5 +69,22 @@ public class CourtCounter extends AppCompatActivity {
     public void displayForTeamB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
+    }
+
+    public void saveScore(View view){
+        Intent list = new Intent(CourtCounter.this, CountScore.class);
+        EditText aName = (EditText)findViewById(R.id.nameA);
+        EditText bName = (EditText)findViewById(R.id.nameB);
+        TextView aScore = (TextView)findViewById(R.id.team_a_score);
+        TextView bScore = (TextView)findViewById(R.id.team_b_score);
+        String nameA = aName.getText().toString();
+        String nameB = bName.getText().toString();
+        int scoreA = Integer.parseInt(aScore.toString());
+        int scoreB = Integer.parseInt(bScore.toString());
+        Bundle dane = new Bundle();
+        dane.putString("nameA", nameA);
+        dane.putInt("scoreA", scoreA);
+        dane.putString("nameB", nameB);
+        dane.putInt("scoreB", scoreB);
     }
 }

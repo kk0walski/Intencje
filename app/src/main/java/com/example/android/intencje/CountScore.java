@@ -1,7 +1,9 @@
 package com.example.android.intencje;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -31,5 +33,10 @@ public class CountScore extends AppCompatActivity {
         ListView list = (ListView)findViewById(R.id.list);
         adapter = new ArrayAdapter<Score>(this, R.layout.row,listItems);
         list.setAdapter(adapter);
+    }
+
+    public void back(View view){
+        Intent intencja = new Intent(CountScore.this, CourtCounter.class);
+        startActivity(intencja);
     }
 }

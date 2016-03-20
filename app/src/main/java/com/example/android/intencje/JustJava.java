@@ -114,4 +114,8 @@ public class JustJava extends AppCompatActivity {
                 R.id.quantity_text_view);
         quantityTextView.setText("" + cups);
     }
+    public void back(View view){
+        Intent order = new Intent(JustJava.this, MainActivity.class);
+        startActivity(order);
+    }
 }
